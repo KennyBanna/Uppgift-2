@@ -36,93 +36,6 @@ body {
 }
 
 /* navbar */
-
-/* TODO media query small phone */
-@media screen and (max-width: 400px) {
-    body {
-        grid-template-rows: 50px min-content min-content min-content min-content 70px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "nav"
-            "header"
-            "question"
-            "aside"
-            "answer"
-            "footer";
-    }
-}
-
-/* Question and answer fields */
-
-.question {
-    margin-top: 10px;
-    padding: 10px;
-    padding-left: 20px;
-    grid-area: question;
-}
-
-.answer {
-    padding: 10px;
-    padding-left: 20px;
-    grid-area: answer;
-}
-
-.question em,
-.answer em {
-    font-style: normal;
-    font-weight: bold;
-    color: #821065;
-}
-
-.answer ul {
-    list-style-type: square;
-    margin-bottom: 10px;
-}
-
-#examples {
-    height: 250px;
-    padding: 10px;
-    line-height: 1;
-    border-radius: 5px;
-    background-color: rgb(156, 172, 205);
-}
-
-#examples h3 {
-    margin: 5px;
-}
-
-.photos {
-    height: 150px;
-    background-color: rgb(156, 172, 205);
-    display: flex;
-    gap: 10px;
-}
-
-#examples img {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    scale: 0.5;
-    border: 1px solid #320f2a;
-}
-
-#examples img:hover {
-    transform: scale(1.5);
-    transition: all 0.2s;
-}
-
-
-/* sidebar */
-
-.aside {
-    height: min-content;
-    margin-top: 20px;
-    margin-right: 20px;
-    grid-area: aside;
-    border: 1px solid #320f2a;
-    border-radius: 5px;
-}
-
 nav {
     grid-area: nav;
     background-color: #320f2a;
@@ -152,10 +65,23 @@ header {
     vertical-align: middle;
 }
 
-.sidebar_pic {
+/* TODO media query small phone */
+@media screen and (max-width: 400px) {
+    body {
+        grid-template-rows: 50px min-content min-content min-content min-content 70px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "question"
+            "aside"
+            "answer"
+            "footer";
+    }
+}
+
+img {
     width: 100%;
-    height: 100%;
-    border-radius: 5px;
 }
 
 /* Question and answer fields */
@@ -186,7 +112,6 @@ header {
 }
 
 #examples {
-    height: 250px;
     padding: 10px;
     line-height: 1;
     border-radius: 5px;
@@ -198,18 +123,9 @@ header {
 }
 
 .photos {
-    height: 150px;
     background-color: rgb(156, 172, 205);
     display: flex;
     gap: 10px;
-}
-
-#examples img {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    scale: 0.5;
-    border: 1px solid #320f2a;
 }
 
 #examples img:hover {
@@ -229,6 +145,12 @@ header {
     padding: 10px;
     background-color: rgb(209, 241, 246);
 }
+
+.sidebar_pic {
+    border-radius: 5px;
+}
+
+/* Footer */
 
 footer {
     grid-area: footer;
